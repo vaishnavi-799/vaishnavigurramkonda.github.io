@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaishnavi Gurramkonda | Portfolio</title>
+
+<style>
+:root {
+    --primary-blue: #1a4a8e;
+    --accent-yellow: #f1c40f;
+    --text-main: #333;
+    --text-muted: #666;
+    --bg-light: #ffffff;
+    --card-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+/* Smooth scroll FIX */
+html{
+    scroll-behavior:smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Arial, sans-serif;
+    line-height:1.6;
+    background:#fff;
+    color:var(--text-main);
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:0 20px;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--text-muted);
+    font-size:0.85rem;
+    font-weight:600;
+    text-transform:uppercase;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--primary-blue);
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:bold;
+    color:var(--primary-blue);
+}
+
+.logo span{
+    color:var(--accent-yellow);
+}
+
+.btn-resume{
+    padding:8px 18px;
+    border:2px solid var(--primary-blue);
+    color:var(--primary-blue);
+    text-decoration:none;
+    font-weight:bold;
+    font-size:0.8rem;
+    border-radius:4px;
+    transition:0.3s;
+}
+
+.btn-resume:hover{
+    background:var(--primary-blue);
+    color:#fff;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.hero h1 span{
+    color:var(--primary-blue);
+}
+
+.hero h2{
+    font-size:1.4rem;
+    font-weight:400;
+    color:#555;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:850px;
+    margin:auto;
+    color:var(--text-muted);
+    margin-top:20px;
+    text-align:justify;
+}
+/* ================= PROFILE IMAGE ================= */
+
+
+.profile-pic{
+    display:flex;
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.profile-pic img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid var(--primary-blue);
+    padding:6px;
+    background:var(--accent-yellow);
+    box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+/* ================= SKILLS ================= */
+
+#skills{
+    padding:80px 0;
+    text-align:center;
+}
+
+.section-header{
+    font-size:1.8rem;
+    margin-bottom:40px;
+    text-transform:uppercase;
+}
+
+.skills-wrapper{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+    max-width:800px;
+    margin:0 auto;
+}
+
+.skill-box{
+    padding:15px;
+    background:#fff;
+    box-shadow:var(--card-shadow);
+    border-radius:6px;
+    transition:0.3s;
+    font-weight:500;
+}
+
+.skill-box:hover{
+    background:var(--primary-blue);
+    color:#fff;
+    transform:translateY(-5px);
+}
+
+/* ================= PROJECTS ================= */
+
+#projects{
+    padding:100px 0;
+    background:#f9f9f9;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:8px;
+    box-shadow:var(--card-shadow);
+    text-align:center;
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card h3{
+    margin-bottom:15px;
+}
+
+.project-card p{
+    font-size:0.9rem;
+    color:#555;
+}
+
+.project-card a{
+    display:inline-block;
+    margin-top:20px;
+    text-decoration:none;
+    color:var(--primary-blue);
+    font-weight:bold;
+}
+
+
+/* ================= HACKATHONS ================= */
+
+#hackathons{
+    padding:100px 0;
+    background:#f9f9f9;
+}
+
+.hackathons-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.hackathon-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:8px;
+    box-shadow:var(--card-shadow);
+    text-align:center;
+    transition:0.3s;
+}
+
+.hackathon-card:hover{
+    transform:translateY(-10px);
+}
+
+.hackathon-card h3{
+    margin-bottom:15px;
+}
+
+.hackathon-card p{
+    font-size:0.9rem;
+    color:#555;
+}
+
+
+
+
+/* ================= CONTACT ================= */
+
+#contact{
+    padding:80px 0;
+    text-align:center;
+    color:var(--primary-blue);
+}
+
+.contact-box{
+    display:inline-block;
+    border:2px solid var(--primary-blue);
+    padding:12px 30px;
+    margin:10px;
+    transition:0.3s;
+    
+}
+
+.contact-box:hover{
+    background:#f0f8ff;
+}
+
+.contact-box a{
+    text-decoration:none;
+    color:var(--primary-blue);
+    font-weight:bold;
+}
+
+
+/* ================= CERTIFICATIONS ================= */
+
+#certifications{
+    padding:100px 0;
+    background:#ffffff;
+}
+
+.certifications-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.certificate-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:8px;
+    box-shadow:var(--card-shadow);
+    text-align:center;
+    transition:0.3s;
+    
+}
+
+.certificate-card:hover{
+    transform:translateY(-10px);
+}
+
+.certificate-card h3{
+    margin-bottom:15px;
+}
+
+.certificate-card p{
+    font-size:0.9rem;
+    color:#555;
+}
+.certificate-card a{
+    display:inline-block;
+    margin-top:20px;
+    text-decoration:none;
+    color:var(--primary-blue);
+    font-weight:bold;
+}
+/* ================= FOOTER ================= */
+
+footer{
+    padding:40px 0;
+    text-align:center;
+    border-top:1px solid #eee;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">VG<span>.</span></div>
+    <!-- LEFT -->
+    <ul>
+        <li><a href="https://www.linkedin.com/in/vaishnavi-gurramkonda-b19a29324/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.geeksforgeeks.org/profile/vaishnavigurxad8/" target="_blank">GeeksforGeeks</a></li>
+        <li><a href="https://github.com/vaishnavi-799" target="_blank">GitHub</a></li>
+
+    </ul>
+
+    <!-- CENTER -->
+    <!-- <div class="logo">VG<span>.</span></div> -->
+
+    <!-- RIGHT -->
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#hackathons">Hackathons</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="Vaishnavi_Resume.pdf" class="btn-resume" download>Resume</a></li>
+        
+    </ul>
+
+</nav>
+
+<section class="hero" id="about">
+    <div class="profile-pic">
+    <img src="profile.jpg" alt="Vaishnavi Gurramkonda">
+    </div>
+    <h1>Hi, I am <span>Vaishnavi Gurramkonda</span></h1>
+    <h2>Computer Science Student</h2>
+
+    <p  class="text-align: justify" >
+        I am Vaishnavi Gurramkonda, a motivated Computer Science undergraduate (B.Tech CSE, 2023–2027) at JNTUH University College of Engineering, Sultanpur, with a solid foundation in Data Structures, Algorithms, and Web Development. I enjoy solving complex problems and transforming ideas into functional, user-friendly software applications.
+        
+        Through academic projects and continuous self-learning, I have developed practical skills in building responsive web applications and exploring AI-driven solutions. I actively enhance my coding and analytical abilities through competitive programming and technical platforms.
+        
+        I aspire to grow as a Software Developer by contributing to innovative projects during internships and professional opportunities. I am enthusiastic about leveraging modern technologies, collaborative teamwork, and creative thinking to build scalable and impactful real-world applications.
+    </p>
+</section>
+
+<section id="skills">
+<div class="container">
+<h2 class="section-header">Technical Skills</h2>
+
+<div class="skills-wrapper">
+    <div class="skill-box">C++</div>
+    <div class="skill-box">DSA</div>
+    <div class="skill-box">SQL</div>
+    <div class="skill-box">NLP</div>
+    <div class="skill-box">HTML</div>
+    <div class="skill-box">CSS</div>
+    <div class="skill-box">JavaScript</div>
+    <div class="skill-box">MongoDB</div>
+    <div class="skill-box">Git & GitHub</div>
+    
+    
+</div>
+
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+<h2 class="section-header">Projects</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+<h3>E-Commerce Website</h3>
+<p>
+Developed responsive product listing, cart and admin dashboard.
+Integrated REST APIs for authentication and order processing.
+</p>
+<a href="https://github.com/vaishnavi-799/Ecommerce-FullStackProject" target="_blank">View on GitHub</a>
+</div>
+
+<div class="project-card">
+<h3>AI-Based E-Waste Sorting System</h3>
+<p>
+Designed AI protocol using OpenCV and Kaggle datasets.
+Planned TensorFlow-based automation integration.
+</p>
+<a href="#">View Project</a>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="hackathons">
+<div class="container">
+<h2 class="section-header">Hackathons & Workshops</h2>
+
+<div class="hackathons-grid">
+
+<div class="hackathon-card">
+<h3>National Hackathon</h3>
+<p>JNTUH UCE Sultanpur (Apr 2025)</p>
+</div>
+
+<div class="hackathon-card">
+<h3>Harithon Eco Hackathon</h3>
+<p>JNTUH UCE Sultanpur (2025)</p>
+</div>
+
+<div class="hackathon-card">
+<h3>National Workshop on DevOps</h3>
+<p>JNTUH UCE Sultanpur (Mar 2025)</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="certifications">
+<div class="container">
+<h2 class="section-header">Certifications</h2>
+
+<div class="certifications-grid">
+
+
+<div class="certificate-card">
+<h3>SQL (Basic) Certificate</h3>
+<p>
+Achieved from HackerRank
+</p>
+<a href="https://www.hackerrank.com/certificates/e483728e63d8" target="_blank">See Certificate</a>
+</div>
+
+<div class="certificate-card">
+<h3>Generative AI Workshop </h3>
+<p>
+IIT Hyderabad
+</p>
+</div>
+
+
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-header">Contact</h2>
+
+<div class="contact-box">
+<a href="mailto:vaishnavigurramkonda04@gmail.com">
+vaishnavigurramkonda04@gmail.com
+</a>
+</div>
+
+<div class="contact-box">
+    <a href="">7997045949</a>
+
+</div>
+
+</section>
+
+<footer>
+<p> Vaishnavi Gurramkonda | Sultanpur, Telangana, India</p>
+</footer>
+
+</body>
+</html>
